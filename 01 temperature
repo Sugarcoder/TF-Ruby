@@ -1,28 +1,37 @@
 class Temperature
 
-  def temp_conv_functions
+  def temperature_conversion_functions
 
-    def FtoC(ftoc)
-      puts "converts freezing temperature #{ftoc} 32 == 0"
+    def ftoc
+      
+      puts "converts freezing temperature"
+        ftoc(32) == 0
 
-      puts "converts boiling temperature #{ftoc} 212 == 100"
+      puts "converts boiling temperature"
+        ftoc(212) == 100
 
-      puts "converts body temperature #{ftoc} 98.6 == 37"
+      puts "converts body temperature"
+        ftoc(98.6) == 37
 
-      puts "converts arbitrary temperature #{ftoc} 68 == 20"
+      puts "converts arbitrary temperature"
+        ftoc(68) == 20
 
     end
 
 
-    def CtoF (ctof)
+    def ctof
 
-      puts "converts feezing temperature #{ctof} 0 == 32"
+      puts "converts feezing temperature"
+        ctof(0) == 32
 
-      puts "converts boiling temperature #{ctof} 100 == 212"
+      puts "converts boiling temperature"
+        ctof(100) == 212
 
-      puts "converts arbitrary temperature #{ctof} 20 == 68"
+      puts "converts arbitrary temperature"
+        ctof(20) == 68
 
-      puts "converts body temperature #{ctof} 37 be_within 0.1/98.6"
+      puts "converts body temperature"
+        ctof(37) == (0.1/98.6)
 
       puts "0.5 - 0.4 - 0.1"
     
