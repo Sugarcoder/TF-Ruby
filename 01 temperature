@@ -22,7 +22,7 @@ class Temperature
 
       puts "converts arbitrary temperature #{ctof} 20 == 68"
 
-      puts "converts body temperature #{ctof} 37 be_within(0.1)(98.6)"
+      puts "converts body temperature #{ctof} 37 be_within 0.1/98.6"
 
       puts "0.5 - 0.4 - 0.1"
     
