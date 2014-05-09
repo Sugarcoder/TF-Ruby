@@ -1,10 +1,22 @@
 class Hello
+
 	def hello
+
 		puts "Hello!"
+			hello == "Hello!"
+			
 	end
 
-	def greet(who)
-		puts "Hello, Alice!"
-		puts "Hello, Bob!"
+
+	def greet
+
+		puts "says hello to someone"
+			greet("Alice") == "Hello, Alice!"
+
+	
+		puts "says hello to someone else"
+			greet("Bob") == "Hello, Bob!"
+
 	end
+
 end
