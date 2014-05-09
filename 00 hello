@@ -1,8 +1,8 @@
 def hello 
-	"Hello!"
+	puts "Hello!"
 end
 
 
 def greet(who)
-	"Hello, #{who}!"
+	puts "Hello, #{who}!"
 end
