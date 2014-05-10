@@ -1,0 +1,66 @@
+class Performance_monitor
+
+class Time  # loads up the Time.parse method 
+
+	def Performance_Monitor
+		
+		before
+			@eleven_am = Time.parse("2011-1-2 11:00:00")
+
+		puts "takes about 0 seconds to run an empty block"
+			elapsed_time = measure
+
+			elapsed_time be_within(0.1/0)
+
+		puts "takes exactly 0 seconds to run an empty block (with stubs)"
+			Time.stub(:now) { @eleven_am }
+
+			elapsed_time = measure
+
+			elapsed_time == 0
+
+		puts "takes about 1 second to run a block that sleeps for 1 second"
+			elapsed_time = measure
+				sleep 1
+
+			elapsed_time be_within(0.1/1)
+
+		puts "takes exactly 1 second to run a block that sleeps for 1 second (with stubs"
+			fake_time = @eleven_am
+			Time.stub(:now) { fake_time }
+
+			elapsed_time = measure
+				fake_time += 60     # adds one minute to fake_time
+
+			elapsed_time == 60
+
+		puts "runs a block N times"
+			n = 0
+
+			measure(4)
+				n += 1
+
+			n == 4
+
+		puts "returns the average time, not the total time, when runnning multiple times"
+			run_times = [8,6,5,7]
+			fake_time = @eleven_am
+			Time.stub(:now) {fake_time}
+			average_time = measure(4) 
+				fake_time += run_times.pop
+			average_time == 6.5
+
+		puts "returns the average time when running a random number of times for random lengths of time"
+			fake_time = @eleven_am
+			Time.stub(:now) {fake_time}
+			number_of_times = rand(10) + 2
+			average_time = measure(number_of_times)
+				delay = rand(10)
+				fake_time += delay
+			average_time == (fake_time - @eleven_am).to_f/number_of_times
+
+	end
+
+end
+
+end
