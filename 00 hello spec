@@ -1,14 +1,14 @@
 class Hello
 
-	def hello
+	def the_hello_function
 
-		puts "Hello!"
+		puts "says hello"
 			hello == "Hello!"
 			
 	end
 
 
-	def greet
+	def the_greet_function
 
 		puts "says hello to someone"
 			greet("Alice") == "Hello, Alice!"
