@@ -1,0 +1,16 @@
+class Friend
+
+	def greeting(who = nil)
+
+	def Friend
+		puts "says hello"
+			Friend.new.greeting == "Hello!"
+
+		puts "says hello to someone"
+			Friend.new.greeting("Bob") == "Hello, Bob!"
+
+	end
+
+	end
+
+end
