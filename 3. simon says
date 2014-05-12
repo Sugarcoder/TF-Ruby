@@ -1,0 +1,62 @@
+class SimonSays
+
+	def echo(x)
+
+		x             # If you say "hi", it will echo "hi"
+
+	end
+
+
+
+	def shout(x)       
+
+ 		x.upcase           # If you say "hi", it will echo "HI" back.
+
+	end
+
+
+
+	def repeat(x, times = 3)       # Saying "hello" once will cause it to repeat it 3 times.
+
+		(x * times).join(" ")       # Example: "hello hello hello"
+
+	end
+
+
+
+	def start_of_word(x, n)         # If the word is "hello" and n = 1, then it will return "h" (first letter)
+
+		x(0...n)
+
+	end
+
+
+
+	def first_word(x)
+
+		x.split(" ").first        
+
+		# If you have two words like "Hello Kitty", both words will be split and the first word will be called.
+
+	end
+
+
+	def titleize(x)
+
+		words = x.split.map do |word|
+
+			if %w(and over the).include?(word)     # And, over, these is from the example with words stated NOT to be capitalized
+				word
+			else
+				word.capitalize
+			end
+
+		end
+
+		words.first.capitalize
+		words.join(" ")
+
+	end
+
+
+end
