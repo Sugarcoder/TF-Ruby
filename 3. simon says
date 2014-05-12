@@ -24,9 +24,11 @@ class SimonSays
 
 
 
-	def start_of_word(x, n)         # If the word is "hello" and n = 1, then it will return "h" (first letter)
+	def start_of_word(x, n)        
 
 		x(0...n)
+		
+	# If the word is "hello" and n = 1, then it will return "h" (first letter)
 
 	end
 
