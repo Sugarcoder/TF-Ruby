@@ -1,32 +1,31 @@
 class SimonSays
 
-	def echo(x)
+	def echo(s)
 
-		x             # If you say "hi", it will echo "hi"
-
-	end
-
-
-
-	def shout(x)       
-
- 		x.upcase           # If you say "hi", it will echo "HI" back.
+		s             # If you say "hi", it will echo "hi"
 
 	end
 
 
 
-	def repeat(x, times = 3)       # Saying "hello" once will cause it to repeat it 3 times.
-
-		(x * times).join(" ")       # Example: "hello hello hello"
+	def shout(s)
+ 		s.upcase           # If you say "hi", it will echo "HI" back.
 
 	end
 
 
 
-	def start_of_word(x, n)        
+	def repeat(s, times = 3)       # Saying "hello" once will cause it to repeat it 3 times.
 
-		x(0...n)
+		(s * times).join(" ")       # Example: "hello hello hello"
+
+	end
+
+
+
+	def start_of_word(s, n)        
+
+		s(0...n)
 		
 	# If the word is "hello" and n = 1, then it will return "h" (first letter)
 
@@ -34,18 +33,18 @@ class SimonSays
 
 
 
-	def first_word(x)
+	def first_word(s)
 
-		x.split(" ").first        
+		s.split(" ").first        
 
 		# If you have two words like "Hello Kitty", both words will be split and the first word will be called.
 
 	end
 
 
-	def titleize(x)
+	def titleize(s)
 
-		words = x.split.map do |word|
+		words = s.split.map do |word|
 
 			if %w(and over the).include?(word)     # And, over, these is from the example with words stated NOT to be capitalized
 				word
