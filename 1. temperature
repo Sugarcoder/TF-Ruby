@@ -1,6 +1,9 @@
+# Searched on Google, "how to calculate f to c", and found the formula.
+
+
 class Temperature
 
-  def temp_conversions             # Searched on Google, "how to calculate f to c", and found the formula.
+  def temp_conversions             
 
     def ftoc
       
