@@ -24,7 +24,7 @@ class Calculator
 
 
 
-# Extra credit test-drive bonus:
+# Extra credit Test-Drive bonus:
 
 
 	def multiply(x, y)      # If you multiply 2 times 2, it will equal 4.
