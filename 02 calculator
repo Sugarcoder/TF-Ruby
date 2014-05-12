@@ -1,36 +1,54 @@
 class Calculator
-	
-	def add(x, y)
+
+	def add(x, y)     # If you add 2 + 2, it will equal 4.
+
 		x + y
+
 	end
 	
-	
-	def subtract(x, y)
+
+
+	def subtract(x, y)     # If you subtract 6 - 4, it will equal 2.
+
 		x - y
+
 	end
-
-
-	def sum(numbers)
-		 numbers.inject(0){|total, number| total + number}
-	end
-
 	
-	def multiply(x, y)
+
+
+	def sum(numbers)       # The total number from the ones you entered.
+ 
+		numbers.inject(0)  { |total, number| total + number }
+
+	end
+
+
+
+# Extra credit test-drive bonus:
+
+
+	def multiply(x, y)      # If you multiply 2 times 2, it will equal 4.
+
 		x * y
-	end
 
-
-	def power(x, y)
-		x ** y
 	end
 
 	
-	def factorial_x
+	def power(x, y)        # 2 power 2 is equal to 4.
+
+		x ** y
+
+	end
+
+
+	def factorial          
+
 		if x <= 1
-    			1
-  		else
-    	        	x * factorial(x-1)
-  		end
+			1
+		else
+			x * factorial (x - 1)
+
+
 	end
 
 end
