@@ -1,21 +1,14 @@
 class Friend
 
 	def greeting(who = nil)
+	
 	   if who
       	      "Hello, #{who}!"
+      	      
            else
               "Hello!"
+              
         end
-
-
-	def Friend
-		puts "says hello"
-			Friend.new.greeting == "Hello!"
-
-		puts "says hello to someone"
-			Friend.new.greeting("Bob") == "Hello, Bob!"
-
-	end
 
 end
 
