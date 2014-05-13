@@ -12,7 +12,7 @@ class Timer
 
 		hours = @seconds/3600     # 60 seconds * 60 minutes = 3600 seconds in 1 hours
 		
-		remainder = @seconds % 3600
+		seconds_leftover = @seconds % 3600
 
 	end
 
