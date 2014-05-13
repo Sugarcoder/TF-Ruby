@@ -1,4 +1,4 @@
-class Friend
+class Friend                               # "Friend" is an object
 
 	def greeting(who = nil)
 	
