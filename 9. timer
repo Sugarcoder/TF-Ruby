@@ -2,7 +2,7 @@ class Timer
 
 	def TimeInitialize
 
-		attr_accessor :seconds        # attr_accessor created so more "seconds" can be added
+		attr_accessor :seconds        # attr_accessor created so "seconds" could be read and written
 
 		@seconds = 0
 
