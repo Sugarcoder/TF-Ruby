@@ -1,1 +1,29 @@
 class Book
+
+	def title(book_title)
+
+		words = book_title.split(" ")
+
+		words = [words[0].capitalize] + words [1...-1].map do |word|
+
+			other_words = %w{the, a, an, in, of}
+
+			if other_words.include? word
+
+				word
+
+			else
+
+				word.capitalize                  # This would capitalize all the words except those in "other_words".
+
+			end
+
+		end
+
+
+		@title = words.join(" ")
+
+
+	end
+
+end
