@@ -1,1 +1,81 @@
 class Temperature
+
+
+ 	def in_degree_F(f)
+
+ 		new(:f => f)
+
+ 	end
+
+
+
+ 	def in_degree_C(c)
+
+ 		new(:c => c)
+
+ 	end
+
+
+
+ 	def from_C
+
+ 		@degree_C = c
+
+ 	end
+
+
+
+ 	def from_F
+
+ 		@degree_F = f
+
+ 	end
+
+
+
+# Test-driving bonus: 
+
+
+	def FtoC(f)
+
+		(f - 32) * (5 / 9)       # Formulas to convert F to C temperatures
+
+	end
+
+
+
+
+	def CtoF(c)
+
+		c * (9 / 5) + 32          # Formula to convert C to F temperatures
+
+	end
+
+
+end
+
+
+
+
+class Celsius < Temperature
+
+	def initialize(c)
+
+		new(:c => c)
+
+	end
+
+end
+
+
+
+
+class Fehrenheit < Temperature
+
+	def initialize(f)
+
+		new(:f => f)
+
+	end
+
+end
