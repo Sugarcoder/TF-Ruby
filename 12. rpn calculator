@@ -1,1 +1,133 @@
-class RPN_calculator
+class RPN_Calculator
+
+	attr_accessor :calculator 
+
+		def initialize
+
+			@calculator = [0]
+
+		end
+
+
+  		def number
+
+    		return calculator[calculator.length - 1]
+
+  		end
+
+
+  		def push(number)
+
+   			calculator.push(value.to_f)
+
+   		end
+
+
+
+   		def pop
+
+   			number = calculator.pop
+
+   			raise "calculator is empty" if number.nil?
+
+   			return number
+
+   		end
+   				
+   		
+
+
+		def add
+
+			calculator.push(pop + pop)
+
+		end
+
+
+
+		def subtract
+
+			arbnumber = pop
+
+			calculator.push(pop - arbnumber)
+
+		end
+
+
+		def times
+
+			calculator.push(pop * pop)
+
+		end
+
+
+		def divide
+
+			arbnumber = pop
+
+			calculator.push(pop / arbnumber)
+
+		end
+
+
+
+# Extra Credit
+
+
+		def token a
+
+			a.split.map do |b|
+
+				case b
+
+				when '+', '-', '*', '/'
+
+					b.to_sym
+
+				else
+
+					b.to_f
+
+				end
+
+			end
+
+		end
+
+
+
+
+		def evaluate a
+
+			token(a).each do |b|
+
+				case b
+
+				when :+
+					add
+
+				when :- 
+					subtract
+
+				when :*
+					times
+
+				when :/
+					divide
+
+
+				else
+					push b
+
+				end
+
+		end
+
+		
+
+
+		number
+
+	end
+
+end
