@@ -1,0 +1,66 @@
+class Dictionary
+
+	def Entries
+
+		@entries ||= { }                  # ||= false or nil
+
+	end
+
+
+
+	def Add_Entries name, value = nil
+
+		entries[name] = value
+
+	end
+
+
+
+	def Include_Entries
+
+		entries.keyword.include? word
+
+	end
+
+
+	def Partial_Words
+
+		result = { }
+
+		entries.each do |keyword, definition|
+
+			if keyword =~ /^#{Partial_Words}/          # "=~"" is finding a match or nil if no match
+
+				result[keyword] = definition
+
+			end
+
+		end
+
+		result
+
+	end
+
+
+
+	def Keywords_ABC_order?
+
+		keyword = keyword.sort do
+
+		end
+
+	end
+
+
+	def printable 
+
+		entries.map do |keyword|
+
+			%Q{[keyword.first] "#{keyword.last}" }     # %Q = prints the definition out, after keyword is entered 
+
+		end.sort.join("\n")
+
+	end
+
+
+end
